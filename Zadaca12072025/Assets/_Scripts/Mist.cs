@@ -8,19 +8,20 @@ public class Mist : MonoBehaviour
     [SerializeField] private GameObject mistArea;
     [SerializeField] private PlayerMovement playerMovement;
 
-    private float playerSlowDown = 0.2f;
+    private float playerSlowDown = 0.8f;
 
 
 
     private void OnTriggerEnter(Collider other)
     {
         playerMovement.playerMoveSpeed *= playerSlowDown;
-        Debug.Log($"trigger enter");
+        Debug.Log($"Slowed down");
     }
 
     private void OnTriggerExit(Collider other)
     {
         playerMovement.playerMoveSpeed /= playerSlowDown;
+        Debug.Log($"Back to normal speed");
     }
 
 
