@@ -2,15 +2,26 @@ using UnityEngine;
 
 public class Mist : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    //  1.) Napravite podrucje "magle" u koje kad player udje da mu se uspori kretanje za 20%, a kad izadje onda se nastavi kretati normalnom brzinom
+    //  2.) napravite roptirajuca vrata koja kad dotaknu playera se prestanu vrtiti, a kad ne dotaknu playera da se nastave vrtiti
+
+    [SerializeField] private GameObject mistArea;
+    [SerializeField] private PlayerMovement playerMovement;
+
+    private float playerSlowDown = 0.2f;
+
+
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        playerMovement.playerMoveSpeed *= playerSlowDown;
+        Debug.Log($"trigger enter");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        playerMovement.playerMoveSpeed /= playerSlowDown;
     }
+
+
 }
