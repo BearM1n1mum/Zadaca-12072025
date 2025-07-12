@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotatingDoors : MonoBehaviour
 {
     // 2.) napravite rotirajuca vrata koja kad dotaknu playera se prestanu vrtiti, a kad ne dotaknu playera da se nastave vrtiti
-
+    //skripta stavljena na empty objekt door hinge
     [SerializeField] private GameObject doors;
     [SerializeField] private PlayerMovement playerMovement;
 

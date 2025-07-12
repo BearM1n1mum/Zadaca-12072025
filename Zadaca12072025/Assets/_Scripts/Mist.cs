@@ -4,7 +4,7 @@ public class Mist : MonoBehaviour
 {
     //  1.) Napravite podrucje "magle" u koje kad player udje da mu se uspori kretanje za 20%, a kad izadje onda se nastavi kretati normalnom brzinom
     //  2.) napravite roptirajuca vrata koja kad dotaknu playera se prestanu vrtiti, a kad ne dotaknu playera da se nastave vrtiti
-
+    // skripta stavljena na empty objekt nazvan Mist Area
     [SerializeField] private GameObject mistArea;
     [SerializeField] private PlayerMovement playerMovement;
 

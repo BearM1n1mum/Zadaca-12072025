@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    //skripta stavljena na kocku player
     [SerializeField] public float playerMoveSpeed;
     [SerializeField] private Rigidbody playerRigidBody;
 
